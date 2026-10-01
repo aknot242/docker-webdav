@@ -27,7 +27,7 @@ then
 
 	# Generate SSL certificate using Certbot
 	echo "Running Certbot to generate SSL certificate..."
-	certbot certonly --nginx --non-interactive --agree-tos --email "$LETSENCRYPT_EMAIL" -d "$VIRTUAL_HOST"
+	certbot certonly --standalone --non-interactive --agree-tos --email "$LETSENCRYPT_EMAIL" -d "$VIRTUAL_HOST"
 
 	if [ $? -eq 0 ]; then
 		echo "SSL certificate generated successfully."

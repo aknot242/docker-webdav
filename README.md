@@ -2,6 +2,8 @@
 
 A secure, fast, and lightweight WebDAV Server, built from the official Nginx image with minimal configuration.
 
+Note: Unlike previous versions, the image now builds the `nginx-dav-ext-module` against its NGINX version to provide the `PROPFIND` method required for WebDAV. Debian's `nginx-extras` package provides this module too, but installing it would replace the newer official NGINX version with Debian's older package version.
+
 ## How to use this image
 
 ### Using `docker run`
